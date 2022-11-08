@@ -29,5 +29,25 @@ const counterReducer = (state , action) => {
 //REDUX STORE
 const store = Redux.createStore(counterReducer)
 
+//RENDER STORE FUNCTION
+const render = () => {
+  count.innerText = store.getState()
+}
 
+//Initial render
+render()
+
+//subscribe to store to render at lunch and when state changes
+store.subscribe(render)
+
+//DISPATCHING ACTIONS
+incrementBtn.onclick = function(){
+  store.dispatch(incrementAction)
+ 
+ }
+  decrementBtn.onclick = function(){
+   store.dispatch(decrementAction)
+ 
+ }
+ 
 
