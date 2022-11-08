@@ -2,25 +2,13 @@ const count = document.getElementById("counterh2")
 const incrementBtn = document.getElementById("increment")
 const decrementBtn = document.getElementById("decrement")
 
-
-var counter = 0
-
-const render = () => {
-  count.innerText= counter
+//REDUX ACTIONS
+const incrementAction = {
+  type: "INCREMENT"
 }
-
-render()
-
-
- incrementBtn.onclick = function(){
-  counter++
-  render()
+ const decrementAction = {
+  type: "DECREMENT"
 }
- decrementBtn.onclick = function(){
-  counter--
-  render()
-}
-
 
 
 
