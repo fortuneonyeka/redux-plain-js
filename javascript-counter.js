@@ -26,5 +26,8 @@ const counterReducer = (state , action) => {
 }
 
 
+//REDUX STORE
+const store = Redux.createStore(counterReducer)
+
 
 
